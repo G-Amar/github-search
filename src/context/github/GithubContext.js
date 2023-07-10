@@ -17,23 +17,7 @@ export const GithubProvider = ({children}) => {
 
 
   //removed fetch users
-  const searchUsers = async (text) => {
-    setLoading()
-
-    const params = new URLSearchParams({
-      q: text
-    })
-
-    const response = await fetch(`${GITHUB_URL}/search/users?${params}`)
-
-    const {items} = await response.json()
-
-    dispatch({
-      type: 'GET_USERS',
-      payload: items,
-    })
-    // the reducer automatically sets loading to false
-  }
+ 
 
   const getUser = async (login) => {
     setLoading()
@@ -82,11 +66,8 @@ export const GithubProvider = ({children}) => {
   const clearUsers = () => dispatch({type: 'CLEAR_USERS'})
 
   return <GithubContext.Provider value={{
-    users: state.users,
-    loading: state.loading,
-    user: state.user,
-    repos: state.repos,
-    searchUsers,
+    ...state,
+    dispatch,
     clearUsers,
     getUser,
     getUserRepos
