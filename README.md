@@ -1,4 +1,4 @@
-# Github-search
+# Github-Search
 
 This project is a basic search engine for accounts on GitHub. It was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
