@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# Github-search
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a basic search engine for accounts on GitHub. It was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+This is a project I created to get a better understanding of React. This is a SPA that uses the GitHub API to find accounts and summarize them nicely. This project uses React (functional components, routing, state management with Context and Reducers, etc.), Tailwind CSS, and Daisy UI
 
 ## Available Scripts
 
